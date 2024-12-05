@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               />
               <div>
                 <h1 className="text-2xl font-bold text-white">
-                  Free Templates lib.
+                  Free Components lib.
                 </h1>
                 <p className="text-sm font-medium text-gray-400">
                   Modern & Accessible
@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
       {/* Footer Bottom */}
       <div className="py-6 border-t border-gray-800">
         <div className="text-sm text-center text-gray-500">
-          © {new Date().getFullYear()} Free Templates Lib. Built with ❤️ by{" "}
+          © {new Date().getFullYear()} Free Components Lib. Built with ❤️ by{" "}
           <a
             href="https://x.com/mdirfan_23"
             target="_blank"

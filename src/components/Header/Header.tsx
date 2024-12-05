@@ -23,7 +23,7 @@ const Header: React.FC = () => {
             <h1 className="text-lg font-medium leading-none mb-0.5 text-sky-500">
               Free
             </h1>
-            <h2 className="text-xl font-medium leading-none">Templates lib.</h2>
+            <h2 className="text-xl font-medium leading-none">Components lib.</h2>
           </div>
         </Link>
 
