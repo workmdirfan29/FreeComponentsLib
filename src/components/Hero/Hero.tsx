@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Hero: React.FC = () => {
+
   const pages = [
     { title: "Button", path: "/button" },
     { title: "Development", path: "/development" },
@@ -56,6 +57,9 @@ const Hero: React.FC = () => {
       </div>
     </div>
   );
+
+  return <div>Hero I am testing.</div>;
+
 };
 
 export default Hero;
