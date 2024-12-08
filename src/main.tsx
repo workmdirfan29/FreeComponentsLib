@@ -6,6 +6,9 @@ import Hero from "./components/Hero/Hero.tsx";
 import Layout from "./Layout/Layout.tsx";
 import IntroPage from "./components/pages/IntroPage.tsx";
 import Button from "./components/ui/Button.tsx";
+import AspectRatio from "./components/ui/AspectRatio.tsx";
+import AlertDialog from "./components/ui/AlertDialog.tsx";
+import App from "./App.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +17,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
+        element: <App />,
+      },
+      {
+        path: "components",
         element: <Hero />,
         children: [
           {
@@ -23,6 +30,14 @@ const router = createBrowserRouter([
           {
             path: "button",
             element: <Button />,
+          },
+          {
+            path: "alert-dialog",
+            element: <AlertDialog />,
+          },
+          {
+            path: "aspect-ratio",
+            element: <AspectRatio />,
           },
         ],
       },

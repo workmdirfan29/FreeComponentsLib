@@ -1,9 +1,9 @@
 import React from "react";
 import ReactCode from "../../code/ReactCode";
-import { btnReact } from "../../data/React/btnReactCode";
 import Installation from "../../shared/Installation";
+import { alertReactCode } from "../../data/React/alertReactCode";
 
-const ReactBtn: React.FC = () => {
+const ReactAlert: React.FC = () => {
   const steps = [
     {
       title: "Create a New React App with Vite",
@@ -46,19 +46,19 @@ module.exports = {
     {
       title: "Create Tailwind CSS Files",
       code: `/* src/index.css */
-              @tailwind base;
-              @tailwind components;
-              @tailwind utilities;`,
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;`,
     },
     {
       title: "Setup your App.jsx",
       code: `// src/App.jsx
 import React from "react";
 
-function App() {
+const App = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-blue-500">
-      <h1 className="text-4xl font-bold text-white">Hello, World!</h1>
+        <h1 className="text-4xl font-bold text-white">Hello, World!</h1>
     </div>
   );
 }
@@ -70,7 +70,7 @@ export default App;`,
   return (
     <div className="min-h-screen">
       <div id="code-container">
-        <ReactCode btnReactCode={btnReact} />
+        <ReactCode btnReactCode={alertReactCode} />
       </div>
       <div id="content-container" className="mt-10">
         <h1 className="text-2xl font-semibold">Installation</h1>
@@ -99,4 +99,4 @@ export default App;`,
   );
 };
 
-export default ReactBtn;
+export default ReactAlert;

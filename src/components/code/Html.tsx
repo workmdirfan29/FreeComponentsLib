@@ -5,10 +5,10 @@ import { FiClipboard } from "react-icons/fi";
 import { LuCheck } from "react-icons/lu";
 
 interface HtmlProps {
-  btnHtml: string;
+  codeHtml: string;
 }
 
-const Html: React.FC<HtmlProps> = ({ btnHtml }) => {
+const Html: React.FC<HtmlProps> = ({ codeHtml }) => {
   const [copy, setCopy] = useState(false);
 
   const copyToClipboard = (text: string) => {
@@ -26,7 +26,7 @@ const Html: React.FC<HtmlProps> = ({ btnHtml }) => {
       ) : (
         <button
           className="absolute p-1.5 right-2 top-2 cursor-pointer border-[1px] border-zinc-800 hover:bg-zinc-800 rounded"
-          onClick={() => copyToClipboard(btnHtml)}
+          onClick={() => copyToClipboard(codeHtml)}
         >
           <FiClipboard size={16} />
         </button>
@@ -41,7 +41,7 @@ const Html: React.FC<HtmlProps> = ({ btnHtml }) => {
         }}
         wrapLongLines={true}
       >
-        {btnHtml}
+        {codeHtml}
       </SyntaxHighlighter>
     </div>
   );

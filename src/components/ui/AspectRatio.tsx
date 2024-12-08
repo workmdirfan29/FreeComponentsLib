@@ -1,36 +1,53 @@
 import React, { useState } from "react";
+import { BiPaste } from "react-icons/bi";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 import { MdSlideshow } from "react-icons/md";
 import PreviewContainer from "../container/PreviewContainer";
 import CodeContainer from "../container/CodeContainer";
-import Btn from "../Design/Button";
-import { BiPaste } from "react-icons/bi";
 import PasteContainer from "../container/PasteContainer";
-import HtmlBtn from "../container/HtmlContainer/HtmlBtn";
-import CssBtn from "../container/CssContainer/CssBtn";
-import ReactBtn from "../container/ReactContainer/ReactBtn";
+import AspRatio from "../Design/AspectRatio";
 
-const Button: React.FC = () => {
+import HtmlAspect from "../container/HtmlContainer/HtmlAspect";
+import CssAspect from "../container/CssContainer/CssAspect";
+import ReactAspect from "../container/ReactContainer/ReactAspect";
+
+const AspectRatio: React.FC = () => {
   const [activeTab, setActiveTab] = useState("preview");
-  const CopyCode = `import React from "react";
-    const Button = () => {
-    return (
-        <button className="px-3.5 text-sm font-semibold rounded-md hover:bg-zinc-200 py-2.5 text-black bg-white">
-            Button
-        </button>
-    );
+  const copyCode = `import React from "react";
+import AspRat from "../../assets/AspRat.jpg";
+
+const AspectRatio = () => {
+  return (
+    <div className="relative w-full h-full p-2 aspect-w-16 aspect-h-9">
+      {/* Use url */}
+      {/* <img
+        className="object-cover w-full h-full rounded-lg"
+        src="https://images.pexels.com/photos/1128797/pexels-photo-1128797.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="A computer in a room"
+      /> */}
+
+      {/* Use downloaded Image */}
+
+      <img
+        className="object-cover w-full h-full rounded-lg"
+        src={AspRat}
+        alt="A computer in a room"
+      />
+    </div>
+  );
 };
 
-export default Button;
+export default AspectRatio;
+
 `;
 
   return (
     <div className="min-h-screen px-3">
       <div id="intro">
-        <h1 className="mb-1.5 text-3xl font-bold">Button</h1>
+        <h1 className="mb-1.5 text-3xl font-bold">Aspect Ratio</h1>
         <p className="text-zinc-300">
-          An interactive element for triggering actions.
+          Keeps content in a consistent size ratio.
         </p>
       </div>
       <div
@@ -90,25 +107,24 @@ export default Button;
       <div id="container">
         {activeTab === "preview" && (
           <PreviewContainer
-            copyCode={CopyCode}
-            btnZidx={"z-20 top-5"}
-            className={"h-[50vh]"}
+            copyCode={copyCode}
+            btnZidx={"z-20 bg-zinc-900 top-5"}
+            className={"h-[70vh]"}
           >
-            <Btn />
+            <AspRatio />
           </PreviewContainer>
         )}
 
         {activeTab === "code" && (
           <CodeContainer
             tabs={["html", "css", "reactjs"]}
-            components={[<HtmlBtn />, <CssBtn />, <ReactBtn />]}
+            components={[<HtmlAspect />, <CssAspect />, <ReactAspect />]}
           />
         )}
-
         {activeTab === "paste" && <PasteContainer />}
       </div>
     </div>
   );
 };
 
-export default Button;
+export default AspectRatio;

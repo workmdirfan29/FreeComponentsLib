@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Header */}
-      <div className="fixed z-10 flex items-center justify-between w-full px-6 py-2 border-b-2 border-black shadow bg-zinc-900 md:px-14">
+      <div className="fixed z-30 flex items-center justify-between w-full px-6 py-2 border-b-2 border-black shadow bg-zinc-900 md:px-14">
         {/* Logo */}
         <Link to={"/"} id="img-container" className="flex items-center gap-3">
           <img width={40} src={Logo} alt="Logo" />
@@ -23,7 +23,9 @@ const Header: React.FC = () => {
             <h1 className="text-lg font-medium leading-none mb-0.5 text-sky-500">
               Free
             </h1>
-            <h2 className="text-xl font-medium leading-none">Components lib.</h2>
+            <h2 className="text-xl font-medium leading-none">
+              Components lib.
+            </h2>
           </div>
         </Link>
 

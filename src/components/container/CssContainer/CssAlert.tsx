@@ -1,13 +1,13 @@
 import React from "react";
 import Css from "../../code/Css";
-import { btnCss } from "../../data/css/btnCssCode";
 import { FaGithub, FaTwitter } from "react-icons/fa";
+import { alertCssCode } from "../../data/css/alertCssCode";
 
-const CssBtn: React.FC = () => {
+const CssAlert: React.FC = () => {
   return (
     <div>
       <div id="code-container">
-        <Css btnCss={btnCss} />
+        <Css btnCss={alertCssCode} />
       </div>
 
       <div>
@@ -46,4 +46,4 @@ const CssBtn: React.FC = () => {
   );
 };
 
-export default CssBtn;
+export default CssAlert;
