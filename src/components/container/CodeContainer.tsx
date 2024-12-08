@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import HtmlBtn from "./HtmlContainer/HtmlBtn";
-import CssBtn from "./CssContainer/CssBtn";
-import ReactBtn from "./ReactContainer/ReactBtn";
 
-const CodeContainer: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("html");
+interface CodeContainerProps {
+  tabs: string[]; // List of tab names
+  components: React.ReactNode[]; // List of corresponding components for each tab
+}
+
+const CodeContainer: React.FC<CodeContainerProps> = ({ tabs, components }) => {
+  const [activeTab, setActiveTab] = useState(tabs[0]); // Set default active tab to first tab
 
   return (
     <div
@@ -16,40 +18,24 @@ const CodeContainer: React.FC = () => {
         className="flex items-center justify-center gap-5 border-b-2 border-zinc-900"
       >
         <div id="tab-wrapper" className="flex gap-2 mb-2">
-          <div
-            id="tab-1"
-            onClick={() => setActiveTab("html")}
-            className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
-              activeTab === "html" ? "bg-zinc-800" : ""
-            } cursor-pointer`}
-          >
-            Html
-          </div>
-          <div
-            id="tab-2"
-            onClick={() => setActiveTab("css")}
-            className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
-              activeTab === "css" ? "bg-zinc-800" : ""
-            } cursor-pointer`}
-          >
-            CSS
-          </div>
-          <div
-            id="tab-3"
-            onClick={() => setActiveTab("reactjs")}
-            className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
-              activeTab === "reactjs" ? "bg-zinc-800" : ""
-            } cursor-pointer`}
-          >
-            React
-          </div>
+          {tabs.map((tab, index) => (
+            <div
+              id={String(index)}
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
+                activeTab === tab ? "bg-zinc-800" : ""
+              } cursor-pointer`}
+            >
+              {tab}
+            </div>
+          ))}
         </div>
       </div>
 
       <div id="container">
-        {activeTab === "html" && <HtmlBtn />}
-        {activeTab === "css" && <CssBtn />}
-        {activeTab === "reactjs" && <ReactBtn />}
+        {/* Render the component corresponding to the active tab */}
+        {components[tabs.indexOf(activeTab)]}
       </div>
     </div>
   );

@@ -2,10 +2,10 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Hero: React.FC = () => {
-
   const pages = [
-    { title: "Button", path: "/button" },
-    { title: "Development", path: "/development" },
+    { title: "Alert Dialog", path: "alert-dialog" },
+    { title: "Aspect Ratio", path: "aspect-ratio" },
+    { title: "Button", path: "button" },
   ];
 
   return (
@@ -59,7 +59,6 @@ const Hero: React.FC = () => {
   );
 
   return <div>Hero I am testing.</div>;
-
 };
 
 export default Hero;

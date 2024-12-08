@@ -65,9 +65,9 @@ const Footer: React.FC = () => {
                 <Link
                   target="_blank"
                   className="flex items-center gap-2 my-3 text-sm font-medium text-zinc-400 hover:underline hover:text-sky-500"
-                  to={"https://unlokthmify.vercel.app/"}
+                  to={"https://freetemplatecomp.vercel.app/index.html"}
                 >
-                  Unlok thmify <MdArrowOutward size={15} />
+                  Temp & Comp <MdArrowOutward size={15} />
                 </Link>
               </div>
             </div>

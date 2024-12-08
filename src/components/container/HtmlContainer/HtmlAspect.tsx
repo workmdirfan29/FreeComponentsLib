@@ -1,15 +1,14 @@
 import React from "react";
-import Css from "../../code/Css";
-import { btnCss } from "../../data/css/btnCssCode";
 import { FaGithub, FaTwitter } from "react-icons/fa";
+import Html from "../../code/Html";
+import { aspecthtmlCode } from "../../data/Html/aspecthtmlCode";
 
-const CssBtn: React.FC = () => {
+const HtmlAspect: React.FC = () => {
   return (
     <div>
       <div id="code-container">
-        <Css btnCss={btnCss} />
+        <Html codeHtml={aspecthtmlCode} />
       </div>
-
       <div>
         <div id="content-container" className="mt-10">
           <h1 className="text-2xl font-semibold">Installation</h1>
@@ -46,4 +45,4 @@ const CssBtn: React.FC = () => {
   );
 };
 
-export default CssBtn;
+export default HtmlAspect;
