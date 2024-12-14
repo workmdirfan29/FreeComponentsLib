@@ -1,13 +1,13 @@
 import React from "react";
-import Html from "../../code/BtnCode/Html";
-import { btnHtml } from "../../data/Html/btnhtmlCode";
 import { FaGithub, FaTwitter } from "react-icons/fa";
+import Html from "../../code/Html";
+import { btnhtmlCode } from "../../data/Html/btnhtmlCode";
 
 const HtmlBtn: React.FC = () => {
   return (
     <div>
       <div id="code-container">
-        <Html btnHtml={btnHtml} />
+        <Html codeHtml={btnhtmlCode} />
       </div>
       <div>
         <div id="content-container" className="mt-10">
