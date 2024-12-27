@@ -19,17 +19,17 @@ const App: React.FC = () => {
           web development process. Build faster and better, starting today!
         </p>
 
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex flex-col items-center justify-center gap-3 md:flex-row">
           <Link
             to="/components"
-            className="px-8 py-3 font-semibold text-sm text-white uppercase transition duration-300 ease-in-out transform border-[1px] rounded-lg border-sky-600 hover:bg-sky-600 hover:text-white"
+            className="px-8 py-3 w-full md:w-fit font-semibold text-sm text-white uppercase transition duration-300 ease-in-out transform border-[1px] rounded-lg border-sky-600 hover:bg-sky-600 hover:text-white"
           >
             Get Started
           </Link>
           <Link
             target="_blank"
             to="https://freetemplatecomp.vercel.app/"
-            className="px-6 py-3 text-sm font-semibold uppercase transition duration-300 ease-in-out transform rounded-lg text-zinc-900 bg-sky-600 hover:bg-sky-700 hover:scale-105"
+            className="w-full px-6 py-3 text-sm font-semibold uppercase transition duration-300 ease-in-out transform rounded-lg md:w-fit text-zinc-900 bg-sky-600 hover:bg-sky-700 hover:scale-105"
           >
             Explore Templates
           </Link>

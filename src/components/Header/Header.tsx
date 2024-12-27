@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Header */}
-      <div className="fixed z-30 flex items-center justify-between w-full px-6 py-2 border-b-2 border-black shadow bg-zinc-900 md:px-14">
+      <div className="fixed z-30 flex items-center justify-between w-full px-6 py-2 border-b border-black shadow bg-zinc-900 backdrop-blur-3xl md:px-14">
         {/* Logo */}
         <Link to={"/"} id="img-container" className="flex items-center gap-3">
           <img width={40} src={Logo} alt="Logo" />
@@ -31,15 +31,17 @@ const Header: React.FC = () => {
 
         {/* Links Container for Desktop */}
         <div id="links-container" className="items-center hidden md:flex gap-7">
-          <Link
-            target="_blank"
-            to="https://freetemplatecomp.vercel.app/index.html"
-          >
+          <Link to="/">
             <FaHome size={22} className="hover:text-sky-500" />
           </Link>
           <Link className="hover:text-sky-500" to="about">
             About Us
           </Link>
+
+          <Link className="hover:text-sky-500" to="components">
+            Components
+          </Link>
+
           <Link
             className="hover:text-sky-500"
             target="_blank"
@@ -89,16 +91,28 @@ const Header: React.FC = () => {
         {/* Sidebar Content */}
         <div className="flex flex-col items-center justify-center h-full gap-6">
           <Link
-            target="_blank"
-            to="https://freetemplatecomp.vercel.app/index.html"
+            onClick={toggleSidebar}
+            to={"/"}
             className="flex items-center gap-2 text-xl text-white hover:text-sky-500"
           >
             <FaHome /> Home
           </Link>
-          <Link to="about" className="text-xl text-white hover:text-sky-500">
+          <Link
+            onClick={toggleSidebar}
+            to="about"
+            className="text-xl text-white hover:text-sky-500"
+          >
             About Us
           </Link>
           <Link
+            onClick={toggleSidebar}
+            to="components"
+            className="text-xl text-white hover:text-sky-500"
+          >
+            Components
+          </Link>
+          <Link
+            onClick={toggleSidebar}
             target="_blank"
             to="https://freetemplatecomp.vercel.app/templates/index.html"
             className="text-xl text-white hover:text-sky-500"

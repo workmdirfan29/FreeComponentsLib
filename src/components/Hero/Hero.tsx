@@ -57,8 +57,6 @@ const Hero: React.FC = () => {
       </div>
     </div>
   );
-
-  return <div>Hero I am testing.</div>;
 };
 
 export default Hero;

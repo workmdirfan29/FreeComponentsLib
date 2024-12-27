@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaGithub, FaTwitter } from "react-icons/fa";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 import { MdSlideshow } from "react-icons/md";
 import PreviewContainer from "../container/PreviewContainer";
@@ -10,9 +9,28 @@ import PasteContainer from "../container/PasteContainer";
 import HtmlBtn from "../container/HtmlContainer/HtmlBtn";
 import CssBtn from "../container/CssContainer/CssBtn";
 import ReactBtn from "../container/ReactContainer/ReactBtn";
+import TabContainer from "../shared/TabContainer";
+import ShadowButton from "../Design/ShadowButton";
+import HtmlBtn2 from "../container/HtmlContainer/HtmlBtn2";
+import CssBtn2 from "../container/CssContainer/CssBtn2";
+import ReactBtn2 from "../container/ReactContainer/ReactBtn2";
 
 const Button: React.FC = () => {
   const [activeTab, setActiveTab] = useState("preview");
+  const [activeTab2, setActiveTab2] = useState("preview2");
+
+  const tabs1 = [
+    { id: "preview", label: "Preview", icon: <MdSlideshow size={15} /> },
+    { id: "code", label: "Code", icon: <HiOutlineCommandLine size={15} /> },
+    { id: "paste", label: "Paste to check", icon: <BiPaste size={15} /> },
+  ];
+
+  const tabs2 = [
+    { id: "preview2", label: "Preview", icon: <MdSlideshow size={15} /> },
+    { id: "code2", label: "Code", icon: <HiOutlineCommandLine size={15} /> },
+    { id: "paste2", label: "Paste to check", icon: <BiPaste size={15} /> },
+  ];
+
   const CopyCode = `import React from "react";
     const Button = () => {
     return (
@@ -25,6 +43,19 @@ const Button: React.FC = () => {
 export default Button;
 `;
 
+  const CopyCode2 = `import React from "react";
+
+const ShadowButton = () => {
+  return (
+    <button className="px-3.5 text-sm font-semibold rounded-md hover:bg-zinc-900 py-2.5 text-white bg-zinc-800">
+      Secondary
+    </button>
+  );
+};
+
+export default ShadowButton;
+`;
+
   return (
     <div className="min-h-screen px-3">
       <div id="intro">
@@ -33,60 +64,14 @@ export default Button;
           An interactive element for triggering actions.
         </p>
       </div>
-      <div
-        id="tabs-container"
-        className="flex items-start justify-between gap-5 mt-14"
-      >
-        <div id="left-tab-container" className="flex gap-2">
-          <div
-            id="tab-1"
-            onClick={() => setActiveTab("preview")}
-            className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
-              activeTab === "preview" ? "bg-zinc-800" : ""
-            } cursor-pointer`}
-          >
-            <MdSlideshow size={15} /> Preview
-          </div>
-          <div
-            id="tab-2"
-            onClick={() => setActiveTab("code")}
-            className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
-              activeTab === "code" ? "bg-zinc-800" : ""
-            } cursor-pointer`}
-          >
-            <HiOutlineCommandLine size={15} /> Code
-          </div>
-          <div
-            id="tab-2"
-            onClick={() => setActiveTab("paste")}
-            className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
-              activeTab === "paste" ? "bg-zinc-800" : ""
-            } cursor-pointer`}
-          >
-            <BiPaste size={15} /> Paste to check
-          </div>
-        </div>
-        <div id="right-tab-container">
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/workmdirfan29/FreeComponentsLib"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg transition-all hover:underline text-zinc-100 hover:text-sky-500"
-            >
-              <FaGithub size={20} />
-            </a>
-            <a
-              href="https://x.com/mdirfan_23"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg transition-all hover:underline text-zinc-100 hover:text-sky-500"
-            >
-              <FaTwitter size={20} />
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* For first button */}
+      <TabContainer
+        key={activeTab}
+        tabs={tabs1}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        styleCss="mt-14"
+      />
       <div id="container">
         {activeTab === "preview" && (
           <PreviewContainer
@@ -100,12 +85,44 @@ export default Button;
 
         {activeTab === "code" && (
           <CodeContainer
-            tabs={["html", "css", "reactjs"]}
+            tabs={["html", "css", "jsx"]}
             components={[<HtmlBtn />, <CssBtn />, <ReactBtn />]}
           />
         )}
 
         {activeTab === "paste" && <PasteContainer />}
+      </div>
+      {/*  example */}
+      <div id="example">
+        <h1 className="my-2 text-2xl font-bold text-zinc-400">Secondary</h1>
+      </div>
+      {/* For second button */}
+      <TabContainer
+        key={activeTab2}
+        tabs={tabs2}
+        activeTab={activeTab2}
+        styleCss="mt-7"
+        setActiveTab={setActiveTab2}
+      />
+      <div id="container-2">
+        {activeTab2 === "preview2" && (
+          <PreviewContainer
+            copyCode={CopyCode2}
+            btnZidx={"z-20 top-5"}
+            className={"h-[50vh]"}
+          >
+            <ShadowButton />
+          </PreviewContainer>
+        )}
+
+        {activeTab2 === "code2" && (
+          <CodeContainer
+            tabs={["html", "css", "jsx"]}
+            components={[<HtmlBtn2 />, <CssBtn2 />, <ReactBtn2 />]}
+          />
+        )}
+
+        {activeTab2 === "paste2" && <PasteContainer />}
       </div>
     </div>
   );
