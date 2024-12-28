@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import Html from "../../code/Html";
 
-import { btnhtmlCode2 } from "../../data/Html/btnhtmlCode2";
+import { btnhtmlCode2 } from "../../data/Html/button/btnhtmlCode2";
 
 const SocialLinks: React.FC = () => {
   const links = [

@@ -1,8 +1,7 @@
 import React from "react";
-import Css from "../../code/Css";
-
 import { FaGithub, FaTwitter } from "react-icons/fa";
-import { btnCss2 } from "../../data/css/button/btnCssCode2";
+import Css from "../../../code/Css";
+import { btnCssOutline } from "../../../data/css/button/btnCssOutline";
 
 const SocialLinks: React.FC = () => {
   const links = [
@@ -33,11 +32,11 @@ const SocialLinks: React.FC = () => {
   );
 };
 
-const CssBtn2: React.FC = () => {
+const CssBtnOutline: React.FC = () => {
   return (
     <div>
       <div id="code-container">
-        <Css btnCss={btnCss2} />
+        <Css btnCss={btnCssOutline} />
       </div>
 
       {/* Content Section */}
@@ -62,4 +61,4 @@ const CssBtn2: React.FC = () => {
   );
 };
 
-export default CssBtn2;
+export default CssBtnOutline;

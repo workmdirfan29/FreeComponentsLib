@@ -1,9 +1,9 @@
 import React from "react";
-import ReactCode from "../../code/ReactCode";
-import Installation from "../../shared/Installation";
-import { btnReact2 } from "../../data/React/button/btnReactCode2";
+import Installation from "../../../shared/Installation";
+import ReactCode from "../../../code/ReactCode";
+import { btnReactOutline } from "../../../data/React/button/btnReactOutline";
 
-const ReactBtn2: React.FC = () => {
+const ReactBtnOutline: React.FC = () => {
   const steps = [
     {
       title: "Create a New React App with Vite",
@@ -70,7 +70,7 @@ export default App;`,
   return (
     <div className="min-h-screen">
       <div id="code-container">
-        <ReactCode btnReactCode={btnReact2} />
+        <ReactCode btnReactCode={btnReactOutline} />
       </div>
       <div id="content-container" className="mt-10">
         <h1 className="text-2xl font-semibold">Installation</h1>
@@ -99,4 +99,4 @@ export default App;`,
   );
 };
 
-export default ReactBtn2;
+export default ReactBtnOutline;

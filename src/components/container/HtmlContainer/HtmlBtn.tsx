@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import Html from "../../code/Html";
-import { btnhtmlCode } from "../../data/Html/btnhtmlCode";
+import { btnhtmlCode } from "../../data/Html/button/btnhtmlCode";
 
 const HtmlBtn: React.FC = () => {
   return (

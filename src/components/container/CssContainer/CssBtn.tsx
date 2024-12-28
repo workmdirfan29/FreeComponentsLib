@@ -1,6 +1,6 @@
 import React from "react";
 import Css from "../../code/Css";
-import { btnCss } from "../../data/css/btnCssCode";
+import { btnCss } from "../../data/css/button/btnCssCode";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 
 const SocialLinks: React.FC = () => {

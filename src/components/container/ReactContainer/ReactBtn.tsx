@@ -1,6 +1,6 @@
 import React from "react";
 import ReactCode from "../../code/ReactCode";
-import { btnReact } from "../../data/React/btnReactCode";
+import { btnReact } from "../../data/React/button/btnReactCode";
 import Installation from "../../shared/Installation";
 
 const ReactBtn: React.FC = () => {
