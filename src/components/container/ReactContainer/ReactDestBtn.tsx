@@ -1,9 +1,10 @@
 import React from "react";
 import ReactCode from "../../code/ReactCode";
-import { btnReact } from "../../data/React/button/btnReactCode";
 import Installation from "../../shared/Installation";
+import { destReactCode } from "../../data/React/button/destReactCode";
 
-const ReactBtn: React.FC = () => {
+
+const ReactDestBtn: React.FC = () => {
   const steps = [
     {
       title: "Create a New React App with Vite",
@@ -70,7 +71,7 @@ export default App;`,
   return (
     <div className="min-h-screen">
       <div id="code-container">
-        <ReactCode btnReactCode={btnReact} />
+        <ReactCode btnReactCode={destReactCode} />
       </div>
       <div id="content-container" className="mt-10">
         <h1 className="text-2xl font-semibold">Installation</h1>
@@ -99,4 +100,4 @@ export default App;`,
   );
 };
 
-export default ReactBtn;
+export default ReactDestBtn;

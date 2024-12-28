@@ -1,29 +1,123 @@
 import React, { useState } from "react";
-import { FaGithub, FaTwitter } from "react-icons/fa";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 import { MdSlideshow } from "react-icons/md";
+import { BiPaste } from "react-icons/bi";
 import PreviewContainer from "../container/PreviewContainer";
 import CodeContainer from "../container/CodeContainer";
-import Btn from "../Design/Button";
-import { BiPaste } from "react-icons/bi";
 import PasteContainer from "../container/PasteContainer";
+import TabContainer from "../shared/TabContainer";
+
+import Btn from "../Design/Button";
+import ShadowButton from "../Design/ShadowButton";
+import DestructiveButton from "../Design/DestructiveButton";
+import OutlineButton from "../Design/OutlineButton";
+
 import HtmlBtn from "../container/HtmlContainer/HtmlBtn";
 import CssBtn from "../container/CssContainer/CssBtn";
 import ReactBtn from "../container/ReactContainer/ReactBtn";
 
+import HtmlBtn2 from "../container/HtmlContainer/HtmlBtn2";
+import CssBtn2 from "../container/CssContainer/CssBtn2";
+import ReactBtn2 from "../container/ReactContainer/ReactBtn2";
+
+import HtmlBtnDest from "../container/HtmlContainer/HtmlBtnDest";
+import CssDestBtn from "../container/CssContainer/CssDestBtn";
+import ReactDestBtn from "../container/ReactContainer/ReactDestBtn";
+
+import HtmlBtnOutline from "../container/HtmlContainer/button/HtmlBtnOutline";
+import CssBtnOutline from "../container/CssContainer/button/CssBtnOutline";
+import ReactBtnOutline from "../container/ReactContainer/button/ReactBtnOutline";
+import GhostButton from "../Design/GhostButton";
+import GhostCssBtn from "../container/CssContainer/button/GhostCssBtn";
+import HtmlBtnGhost from "../container/HtmlContainer/button/HtmlBtnGhost";
+import ReactBtnGhost from "../container/ReactContainer/button/ReactBtnGhost";
+
 const Button: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("preview");
-  const CopyCode = `import React from "react";
-    const Button = () => {
-    return (
-        <button className="px-3.5 text-sm font-semibold rounded-md hover:bg-zinc-200 py-2.5 text-black bg-white">
-            Button
-        </button>
-    );
+  const buttonSections = [
+    {
+      title: "",
+      copyCode: `import React from "react";
+                const Button = () => {
+                     return (
+                        <button className="px-3.5 text-sm font-semibold rounded-md hover:bg-zinc-200 py-2.5 text-black bg-white">
+                            Button
+                        </button>
+                    );
+                  };
+
+export default Button;`,
+      PreviewComponent: Btn,
+      codeComponents: [<HtmlBtn />, <CssBtn />, <ReactBtn />],
+    },
+    {
+      title: "Secondary",
+      copyCode: `import React from "react";
+
+const ShadowButton = () => {
+  return (
+      <button className="px-3.5 text-sm font-semibold rounded-md hover:bg-zinc-900 py-2.5 text-white bg-zinc-800">
+        Secondary
+      </button>
+  );
 };
 
-export default Button;
-`;
+export default ShadowButton;`,
+      PreviewComponent: ShadowButton,
+      codeComponents: [<HtmlBtn2 />, <CssBtn2 />, <ReactBtn2 />],
+    },
+    {
+      title: "Destructive",
+      copyCode: `import React from "react";
+  
+const Button = () => {
+  return (
+      <button className="px-3.5 text-sm font-semibold rounded-md hover:bg-red-800 py-2.5 text-white bg-red-900">
+        Destructive
+      </button>
+  );
+};
+  
+export default Button;`,
+      PreviewComponent: DestructiveButton,
+      codeComponents: [<HtmlBtnDest />, <CssDestBtn />, <ReactDestBtn />],
+    },
+    {
+      title: "Outline",
+      copyCode: `import React from "react";
+              const Button = () => {
+                return (
+                    <button className="px-3.5 border text-sm font-semibold rounded-md hover:bg-zinc-900 border-zinc-800 py-2.5 text-white ">
+                      Outline
+                    </button>
+                );
+              };
+  
+export default Button;`,
+      PreviewComponent: OutlineButton,
+      codeComponents: [
+        <HtmlBtnOutline />,
+        <CssBtnOutline />,
+        <ReactBtnOutline />,
+      ],
+    },
+    {
+      title: "Ghost",
+      copyCode: `import React from "react";
+      
+      const Button = () => {
+        return (
+          <button className="px-3.5 outline-none text-sm font-semibold rounded-md hover:bg-zinc-900 border-none py-2.5 text-white ">
+            Ghost
+          </button>
+        );
+      };
+      
+      export default Button;
+      `,
+      PreviewComponent: GhostButton,
+      codeComponents: [<HtmlBtnGhost />, <GhostCssBtn />, <ReactBtnGhost />],
+    },
+  ];
 
   return (
     <div className="min-h-screen px-3">
@@ -33,80 +127,54 @@ export default Button;
           An interactive element for triggering actions.
         </p>
       </div>
-      <div
-        id="tabs-container"
-        className="flex items-start justify-between gap-5 mt-14"
-      >
-        <div id="left-tab-container" className="flex gap-2">
-          <div
-            id="tab-1"
-            onClick={() => setActiveTab("preview")}
-            className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
-              activeTab === "preview" ? "bg-zinc-800" : ""
-            } cursor-pointer`}
-          >
-            <MdSlideshow size={15} /> Preview
-          </div>
-          <div
-            id="tab-2"
-            onClick={() => setActiveTab("code")}
-            className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
-              activeTab === "code" ? "bg-zinc-800" : ""
-            } cursor-pointer`}
-          >
-            <HiOutlineCommandLine size={15} /> Code
-          </div>
-          <div
-            id="tab-2"
-            onClick={() => setActiveTab("paste")}
-            className={`flex items-center font-semibold text-sm gap-2 px-5 py-2.5 rounded-lg ${
-              activeTab === "paste" ? "bg-zinc-800" : ""
-            } cursor-pointer`}
-          >
-            <BiPaste size={15} /> Paste to check
-          </div>
-        </div>
-        <div id="right-tab-container">
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/workmdirfan29/FreeComponentsLib"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg transition-all hover:underline text-zinc-100 hover:text-sky-500"
-            >
-              <FaGithub size={20} />
-            </a>
-            <a
-              href="https://x.com/mdirfan_23"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg transition-all hover:underline text-zinc-100 hover:text-sky-500"
-            >
-              <FaTwitter size={20} />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="container">
-        {activeTab === "preview" && (
-          <PreviewContainer
-            copyCode={CopyCode}
-            btnZidx={"z-20 top-5"}
-            className={"h-[50vh]"}
-          >
-            <Btn />
-          </PreviewContainer>
-        )}
 
-        {activeTab === "code" && (
-          <CodeContainer
-            tabs={["html", "css", "reactjs"]}
-            components={[<HtmlBtn />, <CssBtn />, <ReactBtn />]}
-          />
-        )}
+      {buttonSections.map((section, index) => {
+        const [activeTab, setActiveTab] = useState("preview");
+        const tabs = [
+          { id: "preview", label: "Preview", icon: <MdSlideshow size={15} /> },
+          {
+            id: "code",
+            label: "Code",
+            icon: <HiOutlineCommandLine size={15} />,
+          },
+          { id: "paste", label: "Paste to check", icon: <BiPaste size={15} /> },
+        ];
 
-        {activeTab === "paste" && <PasteContainer />}
-      </div>
+        return (
+          <div key={index}>
+            <div id="example">
+              <h1 className="my-2 text-2xl font-bold text-zinc-200">
+                {section.title}
+              </h1>
+            </div>
+            <TabContainer
+              key={activeTab}
+              tabs={tabs}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+              styleCss="mt-5"
+            />
+            <div id={`container-${index}`}>
+              {activeTab === "preview" && (
+                <PreviewContainer
+                  copyCode={section.copyCode}
+                  btnZidx={"z-20 top-5"}
+                  className={"h-[50vh]"}
+                >
+                  <section.PreviewComponent />
+                </PreviewContainer>
+              )}
+              {activeTab === "code" && (
+                <CodeContainer
+                  tabs={["html", "css", "jsx"]}
+                  components={section.codeComponents}
+                />
+              )}
+              {activeTab === "paste" && <PasteContainer />}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

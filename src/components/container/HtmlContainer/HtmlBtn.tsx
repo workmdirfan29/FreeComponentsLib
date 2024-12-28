@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import Html from "../../code/Html";
-import { btnhtmlCode } from "../../data/Html/btnhtmlCode";
+import { btnhtmlCode } from "../../data/Html/button/btnhtmlCode";
 
 const HtmlBtn: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const HtmlBtn: React.FC = () => {
       </div>
       <div>
         <div id="content-container" className="mt-10">
-          <h1 className="text-2xl font-semibold">Installation</h1>
+          <h1 className="text-2xl font-semibold text-sky-500">Installation</h1>
           <hr className="my-3 opacity-50 bg-zinc-800" />
         </div>
         <div id="copy">
