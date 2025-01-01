@@ -13,16 +13,8 @@ import DestructiveButton from "../Design/DestructiveButton";
 import OutlineButton from "../Design/OutlineButton";
 
 import HtmlBtn from "../container/HtmlContainer/HtmlBtn";
-import CssBtn from "../container/CssContainer/CssBtn";
-import ReactBtn from "../container/ReactContainer/ReactBtn";
-
 import HtmlBtn2 from "../container/HtmlContainer/HtmlBtn2";
-import CssBtn2 from "../container/CssContainer/CssBtn2";
-import ReactBtn2 from "../container/ReactContainer/ReactBtn2";
-
 import HtmlBtnDest from "../container/HtmlContainer/HtmlBtnDest";
-import CssDestBtn from "../container/CssContainer/CssDestBtn";
-import ReactDestBtn from "../container/ReactContainer/ReactDestBtn";
 
 import HtmlBtnOutline from "../container/HtmlContainer/button/HtmlBtnOutline";
 import CssBtnOutline from "../container/CssContainer/button/CssBtnOutline";
@@ -31,6 +23,16 @@ import GhostButton from "../Design/GhostButton";
 import GhostCssBtn from "../container/CssContainer/button/GhostCssBtn";
 import HtmlBtnGhost from "../container/HtmlContainer/button/HtmlBtnGhost";
 import ReactBtnGhost from "../container/ReactContainer/button/ReactBtnGhost";
+import LinkButton from "../Design/LinkButton";
+import HtmlLinkBtn from "../container/HtmlContainer/button/HtmlLinkBtn";
+import CssBtn from "../container/CssContainer/button/CssBtn";
+import CssBtn2 from "../container/CssContainer/button/CssBtn2";
+import CssDestBtn from "../container/CssContainer/button/CssDestBtn";
+import ReactBtn from "../container/ReactContainer/button/ReactBtn";
+import ReactBtn2 from "../container/ReactContainer/button/ReactBtn2";
+import ReactDestBtn from "../container/ReactContainer/button/ReactDestBtn";
+import ReactBtnLink from "../container/ReactContainer/button/ReactBtnLink";
+import LinkCssBtn from "../container/CssContainer/button/LinkCssBtn ";
 
 const Button: React.FC = () => {
   const buttonSections = [
@@ -116,6 +118,23 @@ export default Button;`,
       `,
       PreviewComponent: GhostButton,
       codeComponents: [<HtmlBtnGhost />, <GhostCssBtn />, <ReactBtnGhost />],
+    },
+    {
+      title: "Link",
+      copyCode: `import React from "react";
+      
+      const LinkButton = () => {
+        return (
+          <button className="text-base font-medium text-white border-none rounded-md outline-none hover:text-sky-500 hover:underline ">
+            Link
+          </button>
+        );
+      };
+      
+      export default LinkButton;
+      `,
+      PreviewComponent: LinkButton,
+      codeComponents: [<HtmlLinkBtn />, <LinkCssBtn />, <ReactBtnLink />],
     },
   ];
 
