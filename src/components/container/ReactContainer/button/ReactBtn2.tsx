@@ -1,7 +1,7 @@
 import React from "react";
-import ReactCode from "../../code/ReactCode";
-import Installation from "../../shared/Installation";
-import { btnReact2 } from "../../data/React/button/btnReactCode2";
+import Installation from "../../../shared/Installation";
+import ReactCode from "../../../code/ReactCode";
+import { btnReact2 } from "../../../data/React/button/btnReactCode2";
 
 const ReactBtn2: React.FC = () => {
   const steps = [

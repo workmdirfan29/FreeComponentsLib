@@ -1,10 +1,10 @@
 import React from "react";
 import Installation from "../../../shared/Installation";
 
-import { ghostReactCode } from "../../../data/React/button/ghostReactCode";
+import { btnLinkReactCode } from "../../../data/React/button/btnLinkReactCode";
 import ReactCode from "../../../code/ReactCode";
 
-const ReactBtnGhost: React.FC = () => {
+const ReactBtnLink: React.FC = () => {
   const steps = [
     {
       title: "Create a New React App with Vite",
@@ -71,7 +71,7 @@ export default App;`,
   return (
     <div className="min-h-screen">
       <div id="code-container">
-        <ReactCode btnReactCode={ghostReactCode} />
+        <ReactCode btnReactCode={btnLinkReactCode} />
       </div>
       <div id="content-container" className="mt-10">
         <h1 className="text-2xl font-semibold">Installation</h1>
@@ -100,4 +100,4 @@ export default App;`,
   );
 };
 
-export default ReactBtnGhost;
+export default ReactBtnLink;

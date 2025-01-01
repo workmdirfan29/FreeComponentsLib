@@ -1,7 +1,7 @@
 import React from "react";
-import Css from "../../code/Css";
-import { btnCss } from "../../data/css/button/btnCssCode";
 import { FaGithub, FaTwitter } from "react-icons/fa";
+import Html from "../../../code/Html";
+import { linkhtmlCode } from "../../../data/Html/button/linkhtmlCode";
 
 const SocialLinks: React.FC = () => {
   const links = [
@@ -32,12 +32,13 @@ const SocialLinks: React.FC = () => {
   );
 };
 
-const CssBtn: React.FC = () => {
+const HtmlLinkBtn: React.FC = () => {
   return (
     <div>
-      <div id="code-container">
-        <Css btnCss={btnCss} />
-      </div>
+      {/* Code Container */}
+      <section id="code-container">
+        <Html codeHtml={linkhtmlCode} />
+      </section>
 
       {/* Content Section */}
       <section id="content-container" className="mt-10">
@@ -61,4 +62,4 @@ const CssBtn: React.FC = () => {
   );
 };
 
-export default CssBtn;
+export default HtmlLinkBtn;
