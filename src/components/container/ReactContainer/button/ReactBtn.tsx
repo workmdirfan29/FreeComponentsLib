@@ -1,7 +1,6 @@
 import React from "react";
-import ReactCode from "../../../code/ReactCode";
+import InstallationGuide from "../../../shared/InstallationGuide";
 import { btnReact } from "../../../data/React/button/btnReactCode";
-import Installation from "../../../shared/Installation";
 
 const ReactBtn: React.FC = () => {
   const steps = [
@@ -9,18 +8,9 @@ const ReactBtn: React.FC = () => {
       title: "Create a New React App with Vite",
       code: "npm create vite@latest",
     },
-    {
-      title: "Navigate to the Project Directory",
-      code: "cd my-react-app",
-    },
-    {
-      title: "Install Dependencies",
-      code: "npm install",
-    },
-    {
-      title: "Start the Development Server",
-      code: "npm run dev",
-    },
+    { title: "Navigate to the Project Directory", code: "cd my-react-app" },
+    { title: "Install Dependencies", code: "npm install" },
+    { title: "Start the Development Server", code: "npm run dev" },
     {
       title: "Install Tailwind CSS and PostCSS",
       code: "npm install -D tailwindcss postcss autoprefixer",
@@ -68,34 +58,11 @@ export default App;`,
   ];
 
   return (
-    <div className="min-h-screen">
-      <div id="code-container">
-        <ReactCode btnReactCode={btnReact} />
-      </div>
-      <div id="content-container" className="mt-10">
-        <h1 className="text-2xl font-semibold">Installation</h1>
-        <hr className="my-3 opacity-50 bg-zinc-800" />
-
-        {steps.map((step, index) => (
-          <div key={index} id={`install-${index + 1}`} className="my-3">
-            <h1
-              className="inline-block my-3 border-b border-sky-500"
-              style={{
-                borderImageSource:
-                  "linear-gradient(to right, #38bdf8, transparent)",
-                borderImageSlice: 1,
-              }}
-            >
-              {step.title}
-            </h1>
-            <Installation codeString={step.code} />
-          </div>
-        ))}
-        <div id="space" className="my-5 text-zinc-950">
-          .
-        </div>
-      </div>
-    </div>
+    <InstallationGuide
+      pageTitle="Installation"
+      btnReactCode={btnReact}
+      steps={steps}
+    />
   );
 };
 
