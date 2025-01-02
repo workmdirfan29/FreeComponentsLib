@@ -1,17 +1,17 @@
 import React from "react";
 import Html from "../../../code/Html";
-import { linkhtmlCode } from "../../../data/Html/button/linkhtmlCode";
+import { destHtmlCode } from "../../../data/Html/button/destHtmlCode";
 import ContentSection from "../../../shared/ContentSection";
 
-const HtmlLinkBtn: React.FC = () => {
+const HtmlBtnDest: React.FC = () => {
   return (
     <div>
       <section id="code-container">
-        <Html codeHtml={linkhtmlCode} />
+        <Html codeHtml={destHtmlCode} />
       </section>
       <ContentSection />
     </div>
   );
 };
 
-export default HtmlLinkBtn;
+export default HtmlBtnDest;
