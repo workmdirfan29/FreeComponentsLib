@@ -4,8 +4,8 @@ import SocialLinks from "./SocialLinks";
 import { Link } from "react-router-dom";
 
 interface ContentSectionProps {
-  contentText?: string; // Optional prop
-  redirectLink?: string; // Optional link for redirection
+  contentText?: string;
+  redirectLink?: string;
 }
 
 const ContentSection: React.FC<ContentSectionProps> = ({
