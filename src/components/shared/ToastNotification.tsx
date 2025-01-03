@@ -11,7 +11,6 @@ const ToastNotification: React.FC = () => {
       closeOnClick
       pauseOnHover
       draggable
-      progress={undefined}
       theme="dark"
     />
   );
