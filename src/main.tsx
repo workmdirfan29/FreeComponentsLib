@@ -9,6 +9,7 @@ import Button from "./components/ui/Button.tsx";
 import AspectRatio from "./components/ui/AspectRatio.tsx";
 import AlertDialog from "./components/ui/AlertDialog.tsx";
 import App from "./App.tsx";
+import InstallationSteps from "./components/pages/InstallationSteps.tsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             element: <AspectRatio />,
           },
         ],
+      },
+      {
+        path: "/installation-steps",
+        element: <InstallationSteps />,
       },
     ],
   },

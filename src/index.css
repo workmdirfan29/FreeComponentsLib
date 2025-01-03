@@ -36,3 +36,27 @@ body {
 ::-webkit-scrollbar-corner {
   background: #1a1a1a;
 }
+
+.Toastify__toast-container {
+  z-index: 9999;
+}
+
+.Toastify__toast--success {
+  background-color: #2d3748;
+  color: #68d391;
+}
+
+.Toastify__toast--error {
+  background-color: #e53e3e;
+  color: #fff;
+}
+
+.Toastify__toast--info {
+  background-color: #3182ce;
+  color: #fff;
+}
+
+.Toastify__toast--warning {
+  background-color: #ed8936;
+  color: #fff;
+}
