@@ -1,17 +1,17 @@
 import React from "react";
-import { iconCssCode } from "../../../data/css/button/iconcssCode";
 import Css from "../../../code/Css";
 import ContentSection from "../../../shared/ContentSection";
+import { btnCssWithIconCode } from "../../../data/css/button/btnCssWithIconCode";
 
-const IconCssBtn: React.FC = () => {
+const CssWithIconBtn: React.FC = () => {
   return (
     <div>
       <div id="code-container">
-        <Css btnCss={iconCssCode} />
+        <Css btnCss={btnCssWithIconCode} />
       </div>
       <ContentSection />
     </div>
   );
 };
 
-export default IconCssBtn;
+export default CssWithIconBtn;

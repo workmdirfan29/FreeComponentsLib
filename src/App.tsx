@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 const App: React.FC = () => {
   return (
     <main className="relative flex items-center justify-center min-h-screen overflow-hidden text-white bg-gradient-to-br from-sky-500 via-zinc-950 to-black">
-      {/* Background Animation */}
       <div className="absolute inset-0 bg-center bg-cover opacity-70 bg-gradient-to-r from-black to-zinc-950"></div>
-
       <div className="relative z-10 px-6 py-8 mt-24 text-center sm:px-12 sm:py-16">
         <h1 className="mb-2 text-3xl font-semibold leading-tight md:text-6xl">
           Unlock Creativity with Our <br />
