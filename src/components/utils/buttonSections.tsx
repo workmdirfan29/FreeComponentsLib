@@ -30,6 +30,8 @@ import WithIconButton from "../Design/WithIconButton";
 import HtmlBtnWithIcon from "../container/HtmlContainer/button/HtmlBtnWithIcon";
 import CssWithIconBtn from "../container/CssContainer/button/CssWithIconbtn";
 import ReactWithIconBtn from "../container/ReactContainer/button/ReactWithIconBtn";
+import LoadingButton from "../Design/LoadingButton";
+import HtmlLoadingBtn from "../container/HtmlContainer/button/HtmlLoadingBtn";
 
 const buttonSections = [
   {
@@ -191,6 +193,47 @@ const buttonSections = [
     PreviewComponent: WithIconButton,
     codeComponents: [
       <HtmlBtnWithIcon />,
+      <CssWithIconBtn />,
+      <ReactWithIconBtn />,
+    ],
+  },
+  {
+    title: "Loading",
+    copyCode: `import React from "react";
+import { BiLoaderCircle } from "react-icons/bi";
+
+const LoadingButton: React.FC = () => {
+  const spinnerStyle = {
+    animation: "spin 3s linear infinite",
+  };
+
+  const keyframes = "
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  ";
+
+  return (
+    <>
+      <style>{keyframes}</style>
+      <button className="flex items-center gap-2 px-4 py-2 rounded-md bg-zinc-100 hover:bg-zinc-300">
+        <BiLoaderCircle color="#000" size={20} style={spinnerStyle} />
+        <span className="font-semibold text-zinc-800">Loading...</span>
+      </button>
+    </>
+  );
+};
+
+export default LoadingButton;
+`,
+    PreviewComponent: LoadingButton,
+    codeComponents: [
+      <HtmlLoadingBtn />,
       <CssWithIconBtn />,
       <ReactWithIconBtn />,
     ],
