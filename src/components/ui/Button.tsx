@@ -12,8 +12,8 @@ const Button: React.FC = () => {
   return (
     <div className="min-h-screen px-3">
       <div id="intro">
-        <h1 className="mb-1.5 text-3xl font-bold">Button</h1>
-        <p className="text-zinc-300">
+        <h1 className="mb-2 text-3xl font-bold">Button</h1>
+        <p className="text-zinc-400">
           An interactive element for triggering actions.
         </p>
       </div>

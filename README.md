@@ -18,12 +18,16 @@ With **pure HTML, CSS, React JSX**, and **Tailwind CSS**, we offer a curated col
 
 ---
 
-## 🚀 Features
+### 🚀 Features
 
 - **Copy-Paste Simplicity**: No installation or configuration required. Copy the provided code and use it in your project.
-- **Wide Range of Components**: Includes buttons, cards, headers, footers, and more!
+
+* **Wide Range of Components**: Includes buttons, cards, headers, footers, and more!
+
 - **Pure Code**: No reliance on external libraries or pre-built UI components. Everything is hand-crafted.
-- **Support for Tailwind CSS**: Tailored components with Tailwind CSS for easy customization.
+
+* **Support for Tailwind CSS**: Tailored components with Tailwind CSS for easy customization.
+
 - **React Support**: Provides both HTML/CSS and React JSX variations.
 
 ---

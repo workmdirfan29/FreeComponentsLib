@@ -1,12 +1,12 @@
 import React from "react";
-import { btnCss } from "../../../data/css/button/btnCssCode";
 import Css from "../../../code/Css";
+import { btnCss } from "../../../data/css/button/btnCssCode";
 import ContentSection from "../../../shared/ContentSection";
 
 const CssBtn: React.FC = () => {
   return (
     <div>
-      <div id="code-container">
+      <div id="container">
         <Css btnCss={btnCss} />
       </div>
       <ContentSection />

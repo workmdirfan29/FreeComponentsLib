@@ -2,7 +2,7 @@ import React from "react";
 import { CiCircleChevLeft } from "react-icons/ci";
 import { RxCopy } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify"; // Import Toastify
+import { toast } from "react-toastify";
 import ToastNotification from "../shared/ToastNotification";
 
 const steps = [
@@ -56,10 +56,8 @@ const steps = [
   },
 ];
 
-// Function to handle copying code to the clipboard and showing the toast
 const copyToClipboard = (code: string) => {
   navigator.clipboard.writeText(code).then(() => {
-    // Show toast notification
     toast.success("Code copied to clipboard!");
   });
 };
@@ -113,7 +111,6 @@ const InstallationSteps: React.FC = () => {
         ))}
       </div>
 
-      {/* Use the reusable ToastContainer component */}
       <ToastNotification />
     </div>
   );

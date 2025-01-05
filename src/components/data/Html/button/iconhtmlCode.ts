@@ -6,7 +6,7 @@ export const iconhtmlCode = `<!DOCTYPE html>
   <title>Icon Button</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="main">
   <button class="icon-button">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -22,5 +22,4 @@ export const iconhtmlCode = `<!DOCTYPE html>
     </svg>
   </button>
 </body>
-</html>
-`;
+</html>`;

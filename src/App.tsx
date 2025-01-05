@@ -10,7 +10,7 @@ const App: React.FC = () => {
           Unlock Creativity with Our <br />
         </h1>
         <h2 className="mb-8 text-3xl font-bold leading-tight md:text-4xl">
-          Premium <span className="text-sky-600">Templates & Components</span>
+          Premium <span className="text-sky-600">Templates & Components.</span>
         </h2>
         <p className="px-10 mb-10 leading-relaxed text-gray-400 md:px-48 text-md sm:text-xl">
           Access free, high-quality templates and components to speed up your
@@ -19,14 +19,14 @@ const App: React.FC = () => {
 
         <div className="flex flex-col items-center justify-center gap-3 md:flex-row">
           <Link
-            to="/components"
             className="px-8 py-3 w-full md:w-fit font-semibold text-sm text-white uppercase transition duration-300 ease-in-out transform border-[1px] rounded-lg border-sky-600 hover:bg-sky-600 hover:text-white"
+            to="/components"
           >
             Get Started
           </Link>
           <Link
-            target="_blank"
             to="https://freetemplatecomp.vercel.app/"
+            target="_blank"
             className="w-full px-6 py-3 text-sm font-semibold uppercase transition duration-300 ease-in-out transform rounded-lg md:w-fit text-zinc-900 bg-sky-600 hover:bg-sky-700 hover:scale-105"
           >
             Explore Templates

@@ -12,5 +12,4 @@ export const sliderJSXCode = `import React from "react";
     );
   };
   
-  export default Slider;
-  `;
+  export default Slider;`;

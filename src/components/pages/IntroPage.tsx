@@ -4,7 +4,6 @@ import { FaGithub, FaTwitter } from "react-icons/fa";
 const IntroPage: React.FC = () => {
   return (
     <div className="text-white bg-zinc-950">
-      {/* Intro Section */}
       <div className="px-4 md:px-8">
         <h1 className="mb-3 text-2xl font-semibold text-white">Introduction</h1>
         <h2 className="mb-2 text-xl font-medium text-white opacity-80">
@@ -14,8 +13,6 @@ const IntroPage: React.FC = () => {
           Effortlessly integrate into your apps. Fully accessible, endlessly
           customizable, and built with open-source principles.
         </p>
-
-        {/* Tags */}
         <div className="flex gap-5 text-sm text-sky-500">
           <span className="transition-all hover:text-sky-600">Accessible</span>
           <span className="transition-all hover:text-sky-600">
@@ -23,12 +20,8 @@ const IntroPage: React.FC = () => {
           </span>
           <span className="transition-all hover:text-sky-600">Open Source</span>
         </div>
-
-        {/* Divider */}
         <hr className="my-6 border-t-2 border-sky-500 opacity-30" />
       </div>
-
-      {/* Purpose and Info Section */}
       <div id="info" className="px-4 py-2 md:px-8">
         <h2 className="mb-4 text-xl font-semibold text-white opacity-90">
           Main Purpose:
@@ -39,7 +32,6 @@ const IntroPage: React.FC = () => {
           their projects. That's why we provide ready-to-use, copy-paste
           solutions that don't require any complex setup.
         </p>
-
         <h2 className="mb-4 text-xl font-semibold text-white opacity-90">
           Components Offered:
         </h2>
@@ -50,12 +42,10 @@ const IntroPage: React.FC = () => {
           CSS, allowing you to easily incorporate them into modern web
           development frameworks and workflows.
         </p>
-
         <p className="text-md text-zinc-400">
           Just copy the code, customize it as needed, and integrate it directly
           into your project. No dependency installation is required!
         </p>
-        {/* Divider */}
         <hr className="my-6 border-t-2 border-sky-500 opacity-30" />
       </div>
 

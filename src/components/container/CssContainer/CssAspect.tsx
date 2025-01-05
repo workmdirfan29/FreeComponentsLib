@@ -1,7 +1,7 @@
 import React from "react";
-import Css from "../../code/Css";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import { aspectCssCode } from "../../data/css/aspectCssCode";
+import Css from "../../code/Css";
 
 const CssAspect: React.FC = () => {
   return (

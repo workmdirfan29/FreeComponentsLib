@@ -34,14 +34,13 @@ const Header: React.FC = () => {
           <Link to="/">
             <FaHome size={22} className="hover:text-sky-500" />
           </Link>
-          <Link className="hover:text-sky-500" to="about">
-            About Us
-          </Link>
 
           <Link className="hover:text-sky-500" to="components">
             Components
           </Link>
-
+          <Link className="hover:text-sky-500" to="contribute">
+            Contribute
+          </Link>
           <Link
             className="hover:text-sky-500"
             target="_blank"
@@ -99,10 +98,10 @@ const Header: React.FC = () => {
           </Link>
           <Link
             onClick={toggleSidebar}
-            to="about"
+            to="contribute"
             className="text-xl text-white hover:text-sky-500"
           >
-            About Us
+            Contribute
           </Link>
           <Link
             onClick={toggleSidebar}

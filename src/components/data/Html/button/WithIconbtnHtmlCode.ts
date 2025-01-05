@@ -14,5 +14,4 @@ export const WithIconBtnHtmlCode = `<!DOCTYPE html>
     <span class="text">Add Item</span>
   </button>
 </body>
-</html>
-`;
+</html>`;

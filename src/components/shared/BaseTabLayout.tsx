@@ -23,14 +23,12 @@ const BaseTabLayout: React.FC<BaseTabLayoutProps> = ({
   const [activeTab, setActiveTab] = useState(tabs[0].key);
 
   return (
-    <div className="min-h-screen px-3">
-      {/* Header */}
+    <div id="main-tab-layout" className="min-h-screen px-3">
       <div id="intro">
         <h1 className="mb-1.5 text-3xl font-bold">{title}</h1>
         <p className="text-zinc-300">{description}</p>
       </div>
 
-      {/* Tabs */}
       <div
         id="tabs-container"
         className="flex items-start justify-between gap-5 mt-14"
@@ -53,7 +51,6 @@ const BaseTabLayout: React.FC<BaseTabLayoutProps> = ({
         </div>
       </div>
 
-      {/* Content */}
       <div id="container" className="mt-10">
         {content[activeTab]}
       </div>

@@ -20,7 +20,7 @@ const Installation: React.FC<InstallationProps> = ({ codeString }) => {
   return (
     <div
       id="installation"
-      className="border-[1px] bg-zinc-800 relative p-1 flex items-center gap-5 border-zinc-800 rounded-md"
+      className="border-[1px] bg-zinc-800 relative p-1 flex items-center gap-4 border-zinc-800 rounded-md"
     >
       {copy ? (
         <button className="absolute z-10 p-1.5 right-2 top-2 cursor-pointer border-[1px] border-zinc-900 hover:bg-zinc-950 rounded">
@@ -38,8 +38,8 @@ const Installation: React.FC<InstallationProps> = ({ codeString }) => {
         language="js"
         style={atomOneDark}
         customStyle={{
-          backgroundColor: "transparent",
           borderRadius: "5px",
+          backgroundColor: "transparent",
         }}
         wrapLongLines={true}
       >

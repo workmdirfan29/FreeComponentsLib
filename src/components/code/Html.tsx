@@ -18,9 +18,9 @@ const Html: React.FC<HtmlProps> = ({ codeHtml }) => {
   };
 
   return (
-    <div className="relative overflow-auto w-full h-[50vh] p-2 mt-2 rounded-lg bg-zinc-900">
+    <div className="relative overflow-auto w-full h-[50vh] p-2 mt-2 rounded-lg bg-neutral-900">
       {copy ? (
-        <button className="absolute p-1.5 right-2 top-2 cursor-pointer border-[1px] border-zinc-800 hover:bg-zinc-800 rounded">
+        <button className="absolute p-1.5 right-2 top-2 cursor-pointer border-[1px] border-neutral-800 hover:bg-zinc-800 rounded">
           <LuCheck size={15} color="#4CAF50" />
         </button>
       ) : (

@@ -2,7 +2,7 @@ export const iconReactCode = `import React from "react";
       
       const Button = () => {
         return (
-          <button className="p-2 border rounded-md outline-none hover:bg-zinc-900 border-zinc-800">
+          <button className="p-2 border rounded-md outline-none hover:bg-zinc-900 border-neutral-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

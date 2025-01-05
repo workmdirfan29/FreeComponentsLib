@@ -12,5 +12,6 @@ export const ghostCssCode = `.ghost-button {
 
 .ghost-button:hover {
     background-color: #18181b;
+    color: white;
 }
 `;

@@ -6,7 +6,7 @@ import { sliderHtmlCode } from "../../data/Html/sliderHtmlCode";
 const HtmlSlider: React.FC = () => {
   return (
     <div>
-      <section id="code-container">
+      <section id="container">
         <Html codeHtml={sliderHtmlCode} />
       </section>
       <ContentSection />

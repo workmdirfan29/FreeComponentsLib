@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 interface CodeContainerProps {
-  tabs: string[]; // List of tab names
-  components: React.ReactNode[]; // List of corresponding components for each tab
+  tabs: string[];
+  components: React.ReactNode[];
 }
 
 const CodeContainer: React.FC<CodeContainerProps> = ({ tabs, components }) => {
-  const [activeTab, setActiveTab] = useState(tabs[0]); // Set default active tab to first tab
+  const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
     <div
@@ -33,10 +33,7 @@ const CodeContainer: React.FC<CodeContainerProps> = ({ tabs, components }) => {
         </div>
       </div>
 
-      <div id="container">
-        {/* Render the component corresponding to the active tab */}
-        {components[tabs.indexOf(activeTab)]}
-      </div>
+      <div id="container">{components[tabs.indexOf(activeTab)]}</div>
     </div>
   );
 };

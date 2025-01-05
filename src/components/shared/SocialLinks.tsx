@@ -5,11 +5,11 @@ const SocialLinks: React.FC = () => {
   const links = [
     {
       href: "https://github.com/workmdirfan29/FreeComponentsLib",
-      icon: <FaGithub size={25} />,
+      icon: <FaGithub size={24} />,
     },
     {
       href: "https://x.com/mdirfan_23",
-      icon: <FaTwitter size={25} />,
+      icon: <FaTwitter size={24} />,
     },
   ];
 

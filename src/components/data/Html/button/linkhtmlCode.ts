@@ -6,8 +6,7 @@ export const linkhtmlCode = `<!DOCTYPE html>
   <link rel="stylesheet" href="styles.css">
   <title>Link Button</title>
 </head>
-<body>
+<body id="main">
   <button class="link-button">Link</button>
 </body>
-</html>
-`;
+</html>`;

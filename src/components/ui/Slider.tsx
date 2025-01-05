@@ -16,7 +16,7 @@ const Slider: React.FC = () => {
   return (
     <BaseTabLayout
       title="Slider"
-      description="A modern slider lets users choose a value from a set range."
+      description="A Modern slider lets users choose a value from a set range."
       tabs={[
         { label: "Preview", icon: <MdSlideshow size={15} />, key: "preview" },
         {

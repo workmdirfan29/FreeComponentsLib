@@ -9,5 +9,4 @@ export const OutHtmlCode = `<!DOCTYPE html>
 <body>
     <button class="outline-button">Outline</button>
 </body>
-</html>
-`;
+</html>`;

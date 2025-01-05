@@ -5,8 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 const ToastNotification: React.FC = () => {
   return (
     <ToastContainer
-      position="bottom-right"
       autoClose={3000}
+      position="bottom-right"
       hideProgressBar
       closeOnClick
       pauseOnHover

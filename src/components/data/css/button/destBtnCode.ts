@@ -9,6 +9,7 @@ export const destBtnCode = `.button {
 }
 
 .button:hover {
+    color: white;
     background-color: #991b1b;
 }
 `;

@@ -33,10 +33,11 @@ const PreviewContainer: React.FC<PreviewContainerProps> = ({
 
   return (
     <div
-      id="preview-container"
+      id="container"
       className={`relative border-[1px] border-zinc-700/90 mt-2 rounded-lg w-full flex justify-center items-center ${className} bg-black`}
     >
       <div
+        id="Preview"
         className={`absolute ${btnZidx} flex items-center border-[1px] border-zinc-900 gap-2 p-1.5 rounded cursor-pointer right-5 top-5"
         id="copy-code`}
         onClick={handleCopy}

@@ -1,6 +1,6 @@
 import React from "react";
-import InstallationGuide from "../../../shared/InstallationGuide";
 import { btnReact2 } from "../../../data/React/button/btnReactCode2";
+import InstallationGuide from "../../../shared/InstallationGuide";
 
 const ReactBtn2: React.FC = () => {
   return <InstallationGuide btnReactCode={btnReact2} />;

@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
             <div>
               <p className="mt-5 mb-2.5 font-extrabold">Follow for updates</p>
               <a
-                className="text-sm hover:transition-all hover:text-sky-500 hover:ml-2"
+                className="text-sm font-semibold hover:transition-all hover:text-sky-500 hover:ml-2"
                 href="https://x.com/mdirfan_23"
               >
                 Twitter @mdirfan_23

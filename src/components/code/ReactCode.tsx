@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { LuCheck } from "react-icons/lu";
+import { FiClipboard } from "react-icons/fi";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { FiClipboard } from "react-icons/fi";
-import { LuCheck } from "react-icons/lu";
 
 interface ReactCodeProps {
   btnReactCode: string;
