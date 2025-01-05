@@ -6,7 +6,7 @@ export const btnhtmlCode2 = `<!DOCTYPE html>
   <title>Shadow Button</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="main">
   <button class="shadow-button">Secondary</button>
 </body>
 </html>`;

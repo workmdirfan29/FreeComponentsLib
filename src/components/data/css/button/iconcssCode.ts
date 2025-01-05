@@ -1,13 +1,13 @@
 export const iconCssCode = `@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 body {
+  margin: 0;
+  height: 100vh;
   font-family: 'Poppins', sans-serif;
   background-color: #f3f4f6;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  justify-content: center;
 }
 
 .icon-button {

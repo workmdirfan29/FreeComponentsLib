@@ -7,12 +7,12 @@ export const sliderCssCode = `.slider {
   appearance: none;
 }
 
-.slider::-webkit-slider-runnable-track {
-  background-color: #212121;
-}
-
 .slider::-webkit-slider-thumb {
   background-color: #4a4a4a;
+}
+
+.slider::-webkit-slider-runnable-track {
+  background-color: #212121;
 }
 
 .slider::-moz-range-track {
@@ -23,11 +23,12 @@ export const sliderCssCode = `.slider {
   background-color: #4a4a4a;
 }
 
+.slider::-ms-thumb {
+  background-color: #4a4a4a;
+}
+
 .slider::-ms-track {
   background-color: #212121;
 }
 
-.slider::-ms-thumb {
-  background-color: #4a4a4a;
-}
 `;

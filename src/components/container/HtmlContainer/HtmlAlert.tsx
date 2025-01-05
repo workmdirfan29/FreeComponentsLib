@@ -1,6 +1,6 @@
 import React from "react";
-import { FaGithub, FaTwitter } from "react-icons/fa";
 import Html from "../../code/Html";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 import { alertHtmlCode } from "../../data/Html/alertHtmlCode";
 
 const HtmlAlert: React.FC = () => {

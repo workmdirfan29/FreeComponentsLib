@@ -5,7 +5,6 @@ export const alertCssCode = `/* Basic reset for margin and padding */
   box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #2d2d2d;
@@ -16,7 +15,6 @@ body {
   height: 100vh;
 }
 
-/* Button Styles */
 button {
   padding: 10px;
   background-color: #333;
@@ -30,7 +28,6 @@ button:hover {
   background-color: #444;
 }
 
-/* Modal Overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -51,7 +48,6 @@ button:hover {
   opacity: 1;
 }
 
-/* Modal Content Styles */
 .modal-content {
   background-color: #333;
   padding: 20px;
@@ -66,7 +62,6 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* Modal Text and Button Styles */
 h1 {
   margin-bottom: 10px;
   font-size: 18px;

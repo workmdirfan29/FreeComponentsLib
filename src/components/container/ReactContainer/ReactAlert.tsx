@@ -1,6 +1,6 @@
 import React from "react";
-import ReactCode from "../../code/ReactCode";
 import Installation from "../../shared/Installation";
+import ReactCode from "../../code/ReactCode";
 import { alertReactCode } from "../../data/React/alertReactCode";
 
 const ReactAlert: React.FC = () => {

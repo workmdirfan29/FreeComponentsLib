@@ -9,7 +9,6 @@ const CssAlert: React.FC = () => {
       <div id="code-container">
         <Css btnCss={alertCssCode} />
       </div>
-
       <div>
         <div id="content-container" className="mt-10">
           <h1 className="text-2xl font-semibold">Installation</h1>

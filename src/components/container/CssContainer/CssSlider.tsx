@@ -1,7 +1,8 @@
 import React from "react";
 import { sliderCssCode } from "../../data/css/sliderCssCode";
-import Css from "../../code/Css";
 import ContentSection from "../../shared/ContentSection";
+import Css from "../../code/Css";
+
 const CssSlider: React.FC = () => {
   return (
     <div>

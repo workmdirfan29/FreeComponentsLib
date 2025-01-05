@@ -17,7 +17,7 @@ const InstallationGuide: React.FC<InstallationGuideProps> = ({
       <div id="content-container" className="mt-10">
         <ContentSection
           contentText="Installation Step Guide"
-          redirectLink="/installation-steps" // Route to redirect
+          redirectLink="/installation-steps"
         />
       </div>
     </div>

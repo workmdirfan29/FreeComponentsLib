@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
+import { Link } from "react-router-dom";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -48,24 +48,24 @@ const Footer: React.FC = () => {
               </h1>
               <div id="our-client" className="mt-5">
                 <Link
-                  className="flex items-center gap-2 my-3 text-sm font-medium text-zinc-400 hover:underline hover:text-sky-500"
                   to={"/"}
+                  className="flex items-center gap-2 my-3 text-sm font-medium text-zinc-400 hover:underline hover:text-sky-500"
                 >
                   Components Lib. <MdArrowOutward size={15} />
                 </Link>
                 <Link
-                  target="_blank"
-                  className="flex items-center gap-2 my-3 text-sm font-medium text-zinc-400 hover:underline hover:text-sky-500"
                   to={
                     "https://freetemplatecomp.vercel.app/templates/index.html"
                   }
+                  className="flex items-center gap-2 my-3 text-sm font-medium text-zinc-400 hover:underline hover:text-sky-500"
+                  target="_blank"
                 >
                   Free Templates <MdArrowOutward size={15} />
                 </Link>
                 <Link
-                  target="_blank"
-                  className="flex items-center gap-2 my-3 text-sm font-medium text-zinc-400 hover:underline hover:text-sky-500"
                   to={"https://freetemplatecomp.vercel.app/index.html"}
+                  className="flex items-center gap-2 my-3 text-sm font-medium text-zinc-400 hover:underline hover:text-sky-500"
+                  target="_blank"
                 >
                   Temp & Comp <MdArrowOutward size={15} />
                 </Link>

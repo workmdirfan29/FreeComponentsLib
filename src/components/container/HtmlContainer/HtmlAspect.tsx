@@ -1,6 +1,6 @@
 import React from "react";
-import { FaGithub, FaTwitter } from "react-icons/fa";
 import Html from "../../code/Html";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 import { aspecthtmlCode } from "../../data/Html/aspecthtmlCode";
 
 const HtmlAspect: React.FC = () => {

@@ -1,12 +1,12 @@
 import React from "react";
 import Html from "../../../code/Html";
-import { btnhtmlCode } from "../../../data/Html/button/btnhtmlCode";
 import ContentSection from "../../../shared/ContentSection";
+import { btnhtmlCode } from "../../../data/Html/button/btnhtmlCode";
 
 const HtmlBtn: React.FC = () => {
   return (
     <div>
-      <section id="code-container">
+      <section id="container">
         <Html codeHtml={btnhtmlCode} />
       </section>
       <ContentSection />

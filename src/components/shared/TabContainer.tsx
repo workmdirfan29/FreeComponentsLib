@@ -11,22 +11,20 @@ type TabContainerProps = {
   tabs: Tab[];
   activeTab?: string;
   setActiveTab?: (tabId: string) => void;
-  styleCss?: string; // Optional custom styling
+  styleCss?: string;
 };
 
 const TabContainer: React.FC<TabContainerProps> = ({
   tabs,
   activeTab: controlledActiveTab,
   setActiveTab: controlledSetActiveTab,
-  styleCss = "", // Default to an empty string if not provided
+  styleCss = "",
 }) => {
   const [internalActiveTab, setInternalActiveTab] = useState(tabs[0]?.id || "");
 
-  // Determine whether to use controlled or internal state
   const activeTab = controlledActiveTab ?? internalActiveTab;
   const setActiveTab = controlledSetActiveTab ?? setInternalActiveTab;
 
-  // Default links
   const defaultLinks = [
     {
       href: "https://github.com/workmdirfan29/FreeComponentsLib",
@@ -43,7 +41,6 @@ const TabContainer: React.FC<TabContainerProps> = ({
       id="tabs-container"
       className={`flex items-start justify-between gap-5 ${styleCss}`}
     >
-      {/* Left tab container */}
       <div id="left-tab-container" className="flex gap-2">
         {tabs.map((tab) => (
           <div
@@ -59,8 +56,6 @@ const TabContainer: React.FC<TabContainerProps> = ({
           </div>
         ))}
       </div>
-
-      {/* Right tab container */}
       <div id="right-tab-container">
         <div className="flex items-center gap-4">
           {defaultLinks.map((link, index) => (

@@ -6,7 +6,7 @@ export const btnhtmlCode = `<!DOCTYPE html>
   <title>Button Example</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="main">
   <button class="btn">Button</button>
 </body>
 </html>

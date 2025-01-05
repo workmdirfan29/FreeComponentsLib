@@ -6,7 +6,7 @@ export const destHtmlCode = `<!DOCTYPE html>
     <link rel="stylesheet" href="styles.css">
     <title>Button</title>
 </head>
-<body>
+<body id="main">
     <button class="button">Destructive</button>
 </body>
 </html>

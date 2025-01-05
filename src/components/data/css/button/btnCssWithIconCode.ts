@@ -1,14 +1,4 @@
-export const btnCssWithIconCode = `body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f3f4f6;
-  margin: 0;
-}
-
-.btn {
+export const btnCssWithIconCode = `.btn {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;

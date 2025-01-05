@@ -6,7 +6,7 @@ import ScrollToTop from "../components/pages/ScrollToTop";
 
 const Layout: React.FC = () => {
   return (
-    <div id="wrapper">
+    <div id="wrapper" className="main-layout">
       <div className="flex flex-col min-h-screen">
         <ScrollToTop />
         <Header />

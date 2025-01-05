@@ -50,7 +50,7 @@ const AltDialog: React.FC = () => {
               </button>
               <button
                 onClick={handleContinue}
-                className="px-4 text-sm py-2.5 text-zinc-950 bg-zinc-100 border-[1px] border-zinc-800 rounded-md hover:bg-neutral-200"
+                className="px-4 text-sm py-2.5 text-zinc-950 bg-neutral-100 border-[1px] border-neutral-800 rounded-md hover:bg-neutral-200"
               >
                 Continue
               </button>

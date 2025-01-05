@@ -11,7 +11,7 @@ const AspectRatio = () => {
         alt="A computer in a room"
       /> */}
 
-      {/* Use downloaded Image */}
+      {/* Use downloaded or local Image */}
 
       <img
         className="object-cover w-full h-full rounded-lg"

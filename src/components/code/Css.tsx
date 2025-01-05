@@ -31,15 +31,14 @@ const Css: React.FC<CssProps> = ({ btnCss }) => {
           <FiClipboard size={16} />
         </button>
       )}
-
       <SyntaxHighlighter
         language="css"
         style={atomOneDark}
+        wrapLongLines={true}
         customStyle={{
           backgroundColor: "transparent",
           borderRadius: "5px",
         }}
-        wrapLongLines={true}
       >
         {btnCss}
       </SyntaxHighlighter>

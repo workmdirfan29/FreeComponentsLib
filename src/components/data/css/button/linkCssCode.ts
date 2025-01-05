@@ -12,6 +12,6 @@ export const linkCssCode = `.link-button {
 
 .link-button:hover {
   color: #38bdf8; 
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 `;

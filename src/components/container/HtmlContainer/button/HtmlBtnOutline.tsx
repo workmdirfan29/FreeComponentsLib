@@ -1,12 +1,12 @@
 import React from "react";
 import Html from "../../../code/Html";
-import { OutHtmlCode } from "../../../data/Html/button/OutHtmlCode";
 import ContentSection from "../../../shared/ContentSection";
+import { OutHtmlCode } from "../../../data/Html/button/OutHtmlCode";
 
 const HtmlBtnOutline: React.FC = () => {
   return (
     <div>
-      <section id="code-container">
+      <section id="container">
         <Html codeHtml={OutHtmlCode} />
       </section>
       <ContentSection />

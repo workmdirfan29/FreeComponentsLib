@@ -16,7 +16,7 @@ const WithIconButton = () => {
         />
       </svg>
 
-      <span className="font-semibold">Add Item</span>
+      <span className="font-semibold">Add Items</span>
     </button>
   );
 };

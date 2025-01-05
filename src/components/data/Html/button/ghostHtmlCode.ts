@@ -6,7 +6,7 @@ export const ghostHtmlCode = `<!DOCTYPE html>
     <link rel="stylesheet" href="styles.css">
     <title>Ghost Button</title>
 </head>
-<body>
+<body id="main">
     <button class="ghost-button">Ghost</button>
 </body>
 </html>

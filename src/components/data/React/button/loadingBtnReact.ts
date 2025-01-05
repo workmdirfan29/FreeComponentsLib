@@ -20,7 +20,7 @@ const LoadingButton: React.FC = () => {
   return (
     <>
       <style>{keyframes}</style>
-      <button className="flex items-center gap-2 px-4 py-2 rounded-md bg-zinc-100 hover:bg-zinc-300">
+      <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-md hover:bg-zinc-300">
         <BiLoaderCircle color="#000" size={20} style={spinnerStyle} />
         <span className="font-semibold text-zinc-800">Loading...</span>
       </button>

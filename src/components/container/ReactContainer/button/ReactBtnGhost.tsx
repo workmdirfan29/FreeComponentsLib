@@ -1,6 +1,6 @@
 import React from "react";
-import InstallationGuide from "../../../shared/InstallationGuide";
 import { ghostReactCode } from "../../../data/React/button/ghostReactCode";
+import InstallationGuide from "../../../shared/InstallationGuide";
 
 const ReactBtnGhost: React.FC = () => {
   return <InstallationGuide btnReactCode={ghostReactCode} />;
