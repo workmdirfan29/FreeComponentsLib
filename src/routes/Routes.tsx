@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
 import Layout from "../Layout/Layout";
+import Slider from "../components/ui/Slider";
 const Hero = lazy(() => import("../components/Hero/Hero"));
 const IntroPage = lazy(() => import("../components/pages/IntroPage"));
 const Button = lazy(() => import("../components/ui/Button"));
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
           {
             path: "aspect-ratio",
             element: <AspectRatio />,
+          },
+          {
+            path: "slider",
+            element: <Slider />,
           },
         ],
       },

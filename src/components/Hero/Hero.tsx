@@ -6,6 +6,7 @@ const Hero: React.FC = () => {
     { title: "Alert Dialog", path: "alert-dialog" },
     { title: "Aspect Ratio", path: "aspect-ratio" },
     { title: "Button", path: "button" },
+    { title: "Slider", path: "slider" },
   ];
 
   return (
