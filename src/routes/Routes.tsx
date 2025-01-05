@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Slider from "../components/ui/Slider";
 import Contribute from "../contributes/Contribute";
+import FancyButton from "../components/ui/FancyButton";
 const Hero = lazy(() => import("../components/Hero/Hero"));
 const IntroPage = lazy(() => import("../components/pages/IntroPage"));
 const Button = lazy(() => import("../components/ui/Button"));
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
           {
             path: "slider",
             element: <Slider />,
+          },
+          {
+            path: "fancy-button",
+            element: <FancyButton />,
           },
         ],
       },
