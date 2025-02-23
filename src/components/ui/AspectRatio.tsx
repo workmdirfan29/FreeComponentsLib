@@ -2,10 +2,8 @@ import React from "react";
 import BaseTabLayout from "../shared/BaseTabLayout";
 import { MdSlideshow } from "react-icons/md";
 import { HiOutlineCommandLine } from "react-icons/hi2";
-import { BiPaste } from "react-icons/bi";
 import PreviewContainer from "../container/PreviewContainer";
 import CodeContainer from "../container/CodeContainer";
-import PasteContainer from "../container/PasteContainer";
 import AspRatio from "../Design/AspectRatio";
 import HtmlAspect from "../container/HtmlContainer/HtmlAspect";
 import CssAspect from "../container/CssContainer/CssAspect";
@@ -23,8 +21,7 @@ const AspectRatio: React.FC = () => {
           label: "Code",
           icon: <HiOutlineCommandLine size={15} />,
           key: "code",
-        },
-        { label: "Paste to Check", icon: <BiPaste size={15} />, key: "paste" },
+        }
       ]}
       content={{
         preview: (
@@ -42,7 +39,6 @@ const AspectRatio: React.FC = () => {
             components={[<HtmlAspect />, <CssAspect />, <ReactAspect />]}
           />
         ),
-        paste: <PasteContainer />,
       }}
     />
   );

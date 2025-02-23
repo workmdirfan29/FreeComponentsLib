@@ -2,10 +2,8 @@ import React from "react";
 import BaseTabLayout from "../shared/BaseTabLayout";
 import { MdSlideshow } from "react-icons/md";
 import { HiOutlineCommandLine } from "react-icons/hi2";
-import { BiPaste } from "react-icons/bi";
 import PreviewContainer from "../container/PreviewContainer";
 import CodeContainer from "../container/CodeContainer";
-import PasteContainer from "../container/PasteContainer";
 import SliderDesign from "../Design/SliderDesign";
 import { sliderJSXCode } from "../data/React/sliderJSXCode";
 import HtmlSlider from "../container/HtmlContainer/HtmlSlider";
@@ -24,7 +22,6 @@ const Slider: React.FC = () => {
           icon: <HiOutlineCommandLine size={15} />,
           key: "code",
         },
-        { label: "Paste to Check", icon: <BiPaste size={15} />, key: "paste" },
       ]}
       content={{
         preview: (
@@ -41,8 +38,7 @@ const Slider: React.FC = () => {
             tabs={["html", "css", "jsx"]}
             components={[<HtmlSlider />, <CssSlider />, <ReactSlider />]}
           />
-        ),
-        paste: <PasteContainer />,
+        )
       }}
     />
   );

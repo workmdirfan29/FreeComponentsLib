@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 import { MdSlideshow } from "react-icons/md";
-import { BiPaste } from "react-icons/bi";
 import PreviewContainer from "../container/PreviewContainer";
 import CodeContainer from "../container/CodeContainer";
-import PasteContainer from "../container/PasteContainer";
 import TabContainer from "../shared/TabContainer";
 import fancyBtnSection from "../utils/fancyBtnSections";
 
@@ -26,8 +24,7 @@ const FancyButton: React.FC = () => {
             id: "code",
             label: "Code",
             icon: <HiOutlineCommandLine size={15} />,
-          },
-          { id: "paste", label: "Paste to check", icon: <BiPaste size={15} /> },
+          }
         ];
 
         return (
@@ -60,7 +57,6 @@ const FancyButton: React.FC = () => {
                   components={section.codeComponents}
                 />
               )}
-              {activeTab === "paste" && <PasteContainer />}
             </div>
           </div>
         );

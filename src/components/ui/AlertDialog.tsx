@@ -2,10 +2,8 @@ import React from "react";
 import BaseTabLayout from "../shared/BaseTabLayout";
 import { MdSlideshow } from "react-icons/md";
 import { HiOutlineCommandLine } from "react-icons/hi2";
-import { BiPaste } from "react-icons/bi";
 import PreviewContainer from "../container/PreviewContainer";
 import CodeContainer from "../container/CodeContainer";
-import PasteContainer from "../container/PasteContainer";
 import AltDialog from "../Design/AltDialog";
 import HtmlAlert from "../container/HtmlContainer/HtmlAlert";
 import CssAlert from "../container/CssContainer/CssAlert";
@@ -24,7 +22,6 @@ const AlertDialog: React.FC = () => {
           icon: <HiOutlineCommandLine size={15} />,
           key: "code",
         },
-        { label: "Paste to Check", icon: <BiPaste size={15} />, key: "paste" },
       ]}
       content={{
         preview: (
@@ -42,7 +39,6 @@ const AlertDialog: React.FC = () => {
             components={[<HtmlAlert />, <CssAlert />, <ReactAlert />]}
           />
         ),
-        paste: <PasteContainer />,
       }}
     />
   );

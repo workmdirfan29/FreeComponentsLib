@@ -4,14 +4,21 @@ import { FaGithub, FaHome, FaTwitter } from "react-icons/fa";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { BiPaste } from "react-icons/bi";
+import PasteContainer from "../container/PasteContainer";
 
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const [isOpenContainer, setIsOpenContainer] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
   };
 
+  const openContainer = () => {
+    setIsOpenContainer(!isOpenContainer)
+  }
   return (
     <>
       {/* Header */}
@@ -30,7 +37,7 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Links Container for Desktop */}
-        <div id="links-container" className="items-center hidden md:flex gap-7">
+        <div id="links-container" className="items-center relative hidden md:flex gap-7">
           <Link to="/">
             <FaHome size={22} className="hover:text-sky-500" />
           </Link>
@@ -48,6 +55,19 @@ const Header: React.FC = () => {
           >
             Templates
           </Link>
+          <p className="hover:text-sky-500 cursor-pointer" onClick={openContainer}>
+            <BiPaste size={20}  color="skyblue"/>
+          </p>
+        </div>
+
+        <div>
+          {
+            isOpenContainer && (
+              <div className="absolute w-[80vw] top-10 right-10">
+                <PasteContainer />
+              </div>
+            )
+          }
         </div>
 
         {/* Social Links and Hamburger Menu */}
